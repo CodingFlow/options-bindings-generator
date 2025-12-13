@@ -1,5 +1,11 @@
 # Options Bindings Generator
 
+
+[![Nuget](https://img.shields.io/nuget/v/OptionsBindingsGenerator)](https://www.nuget.org/packages/OptionsBindingsGenerator)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/CodingFlow/options-bindings-generator/pull-request.yml)
+[![Nuget](https://img.shields.io/nuget/dt/OptionsBindingsGenerator)](https://www.nuget.org/packages/OptionsBindingsGenerator)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/CodingFlow)](https://github.com/sponsors/CodingFlow)
+
 C# source generator to automatically create boilerplate dependency injection registrations for configuration options.
 
 When using the default dependency injection framework in .NET while following the [options pattern](https://learn.microsoft.com/en-us/dotnet/core/extensions/options), it requires specifying boilerplate configuration code per options type. This source generator takes care of the boilerplate by generating an extension method containing all the boilerplate code. You are only required to specify what matters via attributes on the options types.
