@@ -4,18 +4,18 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <IsRoslynComponent>true</IsRoslynComponent>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <Title>Async Api Bindings Generator</Title>
+        <Title>Options Bindings Generator</Title>
         <PackageProjectUrl></PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <RepositoryUrl></RepositoryUrl>
-        <PackageTags></PackageTags>
-        <PackageLicenseExpression></PackageLicenseExpression>
-        <VersionPrefix></VersionPrefix>
-        <Description></Description>
+        <RepositoryUrl>https://github.com/CodingFlow/options-bindings-generator</RepositoryUrl>
+        <PackageTags>source;generator;roslyn;configuration;options;</PackageTags>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <VersionPrefix>0.1.0</VersionPrefix>
+        <Description>C# source generator to automatically create boilerplate dependency injection registrations for configuration options.</Description>
         <Authors>Coding Flow</Authors>
         <RepositoryType>git</RepositoryType>
         <PackageIcon></PackageIcon>
-        <PackageReleaseNotes></PackageReleaseNotes>
+        <PackageReleaseNotes>0.1.0 - Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup>
