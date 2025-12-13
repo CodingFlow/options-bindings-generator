@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="OptionsBindingsGenerator.UnitTests/OptionsBindingsGenerator.UnitTests.csproj" />
   <Project Path="OptionsBindingsGenerator/OptionsBindingsGenerator.csproj" />
+  <Project Path="SampleLibrary/SampleLibrary.csproj" Id="208c9f38-b448-41b6-afc0-4e657c208f31" />
   <Project Path="TestLibrary/TestLibrary.csproj" />
 </Solution>

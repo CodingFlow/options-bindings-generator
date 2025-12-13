@@ -22,7 +22,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace CodingFlow.Generated.{namespaceId};
+namespace CodingFlow.Generated.OptionsBindingsGenerator.Generated{namespaceId};
 
 internal static class OptionsBindings
 {{

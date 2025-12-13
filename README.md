@@ -31,8 +31,8 @@ internal record NatsServiceOptions
 }
 ```
 
-An extension method called `AddOptionsBindings` containing all the required DI code will be generated in the namespace `CodingFlow.Generated.{assemblyName}`, where `{assemblyName}` will be the name of the assembly of one of the option types, which will most likely be the name of the project the option type is in.
-In this example, the fully qualified name will be `CodingFlow.Generated.TestLibrary.AddOptionsBindings`.
+An extension method called `AddOptionsBindings` containing all the required DI code will be generated in the namespace `CodingFlow.Generated.OptionsBindingsGenerator.Generated{assemblyName}`, where `{assemblyName}` will be the name of the assembly of one of the option types, which will most likely be the name of the project the option type is in.
+In this example, the fully qualified name will be `CodingFlow.Generated.OptionsBindingsGenerator.GeneratedTestLibrary.AddOptionsBindings`.
 
 A nonexistent options validator class will also be registered per options type with the attribute. In this example it's called `ValidateNatsServiceOptions`. Create the missing classes using the official [source generator attribute](https://learn.microsoft.com/en-us/dotnet/core/extensions/options-validation-generator) for generating performant options validation based on the data annotations in the options type:
 
@@ -50,7 +50,7 @@ internal partial class ValidateNatsServiceOptions : IValidateOptions<NatsService
 Finally, call the generated extension method in your application DI code:
 
 ```csharp
-using CodingFlow.Generated.TestLibrary;
+using CodingFlow.Generated.OptionsBindingsGenerator.GeneratedTestLibrary;
 
 var builder = Host.CreateApplicationBuilder(args);
 
