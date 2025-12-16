@@ -10,12 +10,13 @@
         <RepositoryUrl>https://github.com/CodingFlow/options-bindings-generator</RepositoryUrl>
         <PackageTags>source;generator;roslyn;configuration;options;</PackageTags>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <VersionPrefix>0.2.0</VersionPrefix>
+        <VersionPrefix>0.2.1</VersionPrefix>
         <Description>C# source generator to automatically create boilerplate dependency injection registrations for configuration options.</Description>
         <Authors>Coding Flow</Authors>
         <RepositoryType>git</RepositoryType>
         <PackageIcon></PackageIcon>
-        <PackageReleaseNotes>0.2.0 - Change generated extension method namespace to avoid clashes.
+        <PackageReleaseNotes>0.2.1 - Prevent exceptions when no options types have the attribute.
+0.2.0 - Change generated extension method namespace to avoid clashes.
 0.1.0 - Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
