@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Immutable;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using Microsoft.CodeAnalysis;
@@ -36,9 +37,12 @@ namespace CodingFlow.OptionsBindingsGenerator
 
         private static void Execute(SourceProductionContext context, ImmutableArray<INamedTypeSymbol> typeSymbols)
         {
-            var (source, className) = OutputGenerator.GenerateOutput(typeSymbols);
+            if (typeSymbols.Any())
+            {
+                var (source, className) = OutputGenerator.GenerateOutput(typeSymbols);
 
-            context.AddSource($"{className}.generated.cs", SourceText.From(source, Encoding.UTF8, SourceHashAlgorithm.Sha256));
+                context.AddSource($"{className}.generated.cs", SourceText.From(source, Encoding.UTF8, SourceHashAlgorithm.Sha256));
+            }
         }
     }
 }

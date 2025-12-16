@@ -18,6 +18,31 @@ public class Tests
     }
 
     [Test]
+    public async Task NoBindings()
+    {
+        var source = await ReadCSharpFile<NoBindingsOptions>(true);
+
+        await new VerifyCS.Test
+        {
+            CompilerDiagnostics = CompilerDiagnostics.None,
+            TestState = {
+                ReferenceAssemblies = ReferenceAssemblies.Net.Net90,
+                AdditionalReferences =
+                {
+                    implementationAssembly,
+                    GetAssembly("TestLibrary")
+                },
+
+                Sources = { source },
+                GeneratedSources =
+                {
+                    
+                },
+            },
+        }.RunAsync();
+    }
+
+    [Test]
     public async Task MixedBindings()
     {
         var sourceOne = await ReadCSharpFile<NatsServiceOptions>(true);
